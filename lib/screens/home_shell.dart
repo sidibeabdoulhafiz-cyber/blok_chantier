@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../state/app_state.dart';
 import 'cart_screen.dart';
 import 'catalog_screen.dart';
+import 'orders_screen.dart';
 
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
@@ -22,7 +23,7 @@ class _HomeShellState extends State<HomeShell> {
     return Scaffold(
       body: IndexedStack(
         index: _index,
-        children: const [CatalogScreen(), CartScreen()],
+        children: const [CatalogScreen(), CartScreen(), OrdersScreen()],
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
@@ -39,6 +40,10 @@ class _HomeShellState extends State<HomeShell> {
               child: const Icon(Icons.shopping_cart_outlined),
             ),
             label: 'Panier',
+          ),
+          const NavigationDestination(
+            icon: Icon(Icons.receipt_long_outlined),
+            label: 'Commandes',
           ),
         ],
       ),
