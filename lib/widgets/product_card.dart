@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/product.dart';
 import '../utils/format.dart';
+import '../screens/product_detail_screen.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -20,7 +21,12 @@ class ProductCard extends StatelessWidget {
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         onTap: () {
-          // TODO: open product detail screen
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => ProductDetailScreen(product: product),
+            ),
+          );
         },
       ),
     );
