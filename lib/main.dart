@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'screens/catalog_screen.dart';
+import 'screens/home_shell.dart';
 import 'state/app_state.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class BlokApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF002060)),
         useMaterial3: true,
       ),
-      home: const CatalogScreen(),
+      home: const HomeShell(),
     );
   }
 }
